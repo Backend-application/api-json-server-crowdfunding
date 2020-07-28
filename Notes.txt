@@ -1,0 +1,123 @@
+           
+         /********************* Deploy app angular to-netlify ************************/
+
+https://scotch.io/tutorials/deploying-an-angular-app-to-netlify
+
+         /************************ One signal  angular ***************************/
+
+https://app.onesignal.com/        docfile@netcourrier.com  
+
+0. https://stackoverflow.com/questions/45347362/integrating-onesignal-with-angular
+
+1. https://blog.angular-university.io/angular-push-notifications/
+
+2. https://gist.github.com/PsyGik/54a5e6cf5e92ba535272c38c2be773f1
+
+3. https://malcoded.com/posts/angular-push-notifications/   // important
+
+4. http://quabr.com:8182/45347362/integrating-onesignal-with-angular-2-cli
+
+
+           /***************************************************************************/
+
+https://github.com/jesperorb/json-server-heroku#create-your-database   // Deploy json-server to {{ free hosting site }}
+
+
+0. $ npm install -g json-server
+
+1.  $ npm install -g faker
+
+2. $ json-server --watch db.json  // start server commande
+
+Routes : 
+
+GET : http://localhost:3000/articles
+
+GET : http://localhost:3000/articles/2
+
+POST: http://localhost:3000/authors  // create author
+{
+  "title": "Vincent Composieux",
+  "username": "vcomposieux",
+  "id": 3
+}
+
+GET : http://localhost:3000/articles/1/comments  // recuperer tous les commentaires de l'article identifie par id=1 
+
+POST : http://localhost:3000/articles/1/comments  // create new comment associe a l'article identifie par id=1
+
+{
+      "id": 3,
+      "body": "Brillant-new",
+      "articleId": 1
+}
+
+GET : http://localhost:3000/authors/3/articles // recuperer tous les articles de l'auteur id
+
+POST : http://localhost:3000/authors/3/articles  // create un nouveau article associe a l'auteur id=3
+
+{
+      "id": 3,
+      "title": "Créer une API avec API Platform-auteur id=3",
+      "authorId": 3
+}
+
+
+PUT : http://localhost:3000/articles/3  // update data article 
+
+{
+      "id": 3,
+      "title": "Créer une API avec API Platform-auteur id=3-update",
+      "authorId": 3
+}
+
+
+Le filtrage se fait à l’aide de simples paramètres de requête :
+GET : http://localhost:3000/articles?title=GraphQL
+
+
+Le tri est aussi simple que d’ajouter les paramètres _sort et _order (asc & desc) dans la requête :
+GET http://localhost:3000/articles?_sort=likes
+
+
+GET http://localhost:3000/articles?_sort=author,score&_order=desc,asc 
+
+(En supposant qu’on a ajouté le champ likes à chaque article). Le tri est ascendant par défaut.
+
+Dans le cas où l’on veux trier par plusieurs propriétés, on peut écrire les propriétés séparées par une virgule :
+
+
+
+
+
+     /*************************Building a mock REST API with json-server ************************/
+
+  Documentation : 
+
+    https://github.com/marak/Faker.js/
+
+    https://github.com/typicode/json-server
+
+    https://github.com/holidayextras/jsonapi-server    // project github jsonapi
+
+0. https://medium.com/backticks-tildes/building-a-mock-rest-api-with-json-server-812ed3e6036a
+
+1. https://spin.atomicobject.com/2018/10/08/mock-api-json-server/
+
+2. https://www.sitepoint.com/mock-rest-apis-using-json-server/  // imporatnt
+
+2. https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d    // important
+
+3. http://zetcode.com/javascript/fakerjs/
+
+
+
+5. https://www.c-sharpcorner.com/blogs/how-to-generate-fake-data-for-application-using-fakerjs   // Faker.js+mongoose
+
+6. https://blog.eleven-labs.com/fr/json-server/  // imporatnt
+
+7. https://codesource.io/building-mock-apis-using-json-schema-faker-and-json-server/
+
+8. https://frederic-radigoy.fr/json-server-un-outil-permettant-de-mocker-une-api-rest
+
+9. 
